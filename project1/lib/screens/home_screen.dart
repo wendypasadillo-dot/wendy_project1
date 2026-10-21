@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                 height: 150,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFCE93D8).withOpacity(0.25), // Soft Lavender
+                  color: const Color(0xFFCE93D8).withOpacity(0.25),
                 ),
               ),
             ),
@@ -92,12 +92,10 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        // ✅ SINGLECHILDSCROLLVIEW ARON DILI MO-OVERFLOW
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
                               const SizedBox(height: 40),
-                              // Logo (Pregnant Woman Icon)
                               Container(
                                 padding: const EdgeInsets.all(16),
                                 decoration: BoxDecoration(
@@ -163,7 +161,6 @@ class HomeScreen extends StatelessWidget {
                                 label: 'Reminders',
                                 onTap: () {},
                               ),
-                              // ✅ GITANGGAL ANG SPACER() UG GIILISAN OG SIZEDBOX
                               const SizedBox(height: 40),
                               _SidebarItem(
                                 icon: Icons.logout,
@@ -217,7 +214,6 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 const Spacer(),
-                                // USER INFO (Naa sa TUO)
                                 Container(
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 12,
@@ -339,6 +335,16 @@ class HomeScreen extends StatelessWidget {
                                                   fontSize: 15,
                                                 ),
                                               ),
+                                              // DIA NA ANG BUTTON
+                                              const SizedBox(height: 20),
+                                              ElevatedButton(
+                                                onPressed: () =>
+                                                    Navigator.pushNamed(
+                                                        context, 'report'),
+                                                child: const Text(
+                                                    'Create Report'),
+                                              ),
+                                              // END SA BUTTON
                                             ],
                                           ),
                                         ),
@@ -367,7 +373,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 16),
 
-                              // STAT CARDS (Maternal Health)
+                              // STAT CARDS
                               GridView.count(
                                 shrinkWrap: true,
                                 physics:
@@ -412,7 +418,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 16),
 
-                              // MENU CARDS (Maternal Health)
+                              // MENU CARDS
                               GridView.count(
                                 shrinkWrap: true,
                                 physics:
